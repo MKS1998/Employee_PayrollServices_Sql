@@ -220,6 +220,15 @@ Rows matched: 2  Changed: 2  Warnings: 0
 ============================================================================================================================================================
 UC9_bility to extendemployee_payroll tableto have Basic Pay,Deductions, Taxable Pay,Income Tax, Net Pay
 
+
+MySQL  localhost:3306 ssl  payroll_service  SQL > alter table employee_payroll
+                                                -> add basic_pay int,
+                                                -> add deductions int,
+                                                -> add taxable_pay int  ,
+                                                -> add tax int,
+                                                -> add net_pay int;
+Query OK, 0 rows affected (0.0527 sec)
+
  MySQL  localhost:3306 ssl  payroll_service  SQL > insert into employee_payroll (name,department,gender,basic_pay,deductions,taxable_pay,tax,net_pay,start,salary) values
                                                 -> ('Mini','Marketing','F',3000000,1000000,1000000,100000,1500000,'2021-07-27',90000);
 
